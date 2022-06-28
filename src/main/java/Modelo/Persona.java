@@ -3,6 +3,15 @@ package Modelo;
 public class Persona {
 
     private String rut, nombre, email;
+    public Persona(String rut) {
+        if (ValidadorRut.Verificacion(rut)) {
+            this.rut = rut;
+        } else {
+            this.rut = null;
+        }
+        this.nombre = nombre;
+        this.email= email;
+    }
 
     public Persona(String rut, String nombre,String email) {
         if (ValidadorRut.Verificacion(rut)) {
